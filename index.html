@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>turnosuñas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Formulario para turnos</h2>
+    
+    <form action="" id="form">
+        <label for="">Nombre</label>
+        <input type="text"  id="nombre" placeholder="ingrese su nombre y apellido">
+        <br><br>
+        <label for="">Uñas</label>
+        <input type="text"  id="uñas" placeholder="uñas que desee">
+        <br><br>
+        <label for="">Numero</label>
+        <input type="text"  id="numero" placeholder="numero de telefono">
+        <br><br>
+    
+        <button type="button" id="agregar" onclick="añadir(); alertaa()"  >Agregar a la tabla</button>
+        <br>
+    </form>
+
+    <h2>Datos ingresados</h2>
+    <table id="mitabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Uñas</th>
+                <th>Numero</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+
+        function alertaa() {
+           window.alert("se ha agendado con exito")
+        }
+
+        function añadir() {
+
+            var nombre = document.getElementById("nombre").value;
+            var uñas = document.getElementById("uñas").value;
+            var numero = document.getElementById("numero").value;
+
+            var tabla = document.getElementById("mitabla").getElementsByTagName('tbody')[0];
+
+            var fila = tabla.insertRow(tabla.rows.length);
+            var colum1 = fila.insertCell(0);
+            var colum2 = fila.insertCell(1);
+            var colum3 = fila.insertCell(2);
+
+            // Agrega los valores del formulario a las celdas
+            colum1.innerHTML = nombre;
+            colum2.innerHTML = uñas;
+            colum3.innerHTML = numero;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+table{
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+th, td {
+border: 1px solid #ccc;
+padding: 8px;
+text-align: left;
+}
+h2{
+background-color: paleturquoise;
+display: block;
+margin: 20px auto;
+padding: 10px 20px;
+color: black;
+border: none;
+border-radius: 5px;
+
+}
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+background-image: url(uña.jpeg);
+}
+
+.header {
+background-color: paleturquoise;
+color: black;
+text-align: center;
+padding: 1rem 0;
+}
+button {
+background-color: darksalmon;
+color: #fff;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+display: block;
+margin: 20px auto;
+border-radius: 5px;
+font-size: large;
+}
